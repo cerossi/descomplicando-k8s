@@ -1,1 +1,4 @@
 scripts
+.terraform
+.terraform.lock.hcl
+tf.plan
