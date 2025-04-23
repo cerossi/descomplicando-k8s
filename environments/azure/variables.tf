@@ -29,6 +29,17 @@ variable "vm_nic_ip_config_name" {
 variable "vm_nic_ip_config_private_ip_address_allocation" {
   type        = string
   description = "Azure virtual machine private ip address allocation"
+  default     = "Dynamic"
+}
+variable "vm_pip_sku" {
+  type        = string
+  description = "Azure virtual machine public ip SKU"
+  default     = "Basic"
+}
+variable "vm_pip_allocation_method" {
+  type        = string
+  description = "Azure virtual machine public ip allocation method"
+  default     = "Dynamic"
 }
 
 
@@ -42,6 +53,7 @@ variable "vm_count" {
 variable "vm_size" {
   type        = string
   description = "Azure virtual machine size"
+  default     = "Standard_B2s"
 }
 variable "vm_admin_username" {
   type        = string
@@ -50,10 +62,12 @@ variable "vm_admin_username" {
 variable "vm_os_disk_caching" {
   type        = string
   description = "Azure virtual machine os disk caching"
+  default     = "ReadWrite"
 }
 variable "vm_os_disk_storage_account_type" {
   type        = string
   description = "Azure virtual machine os disk storage account type"
+  default     = "Standard_LRS"
 }
 variable "vm_source_image_reference_publisher" {
   type        = string
